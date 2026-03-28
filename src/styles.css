@@ -1,3 +1,306 @@
+@font-face {
+    font-family: Brownstone;
+    src: url(assets/BNBrownstone.otf);
+    font-weight: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+
 body {
     background-color: white;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: white;
+    padding: 20px 80px;
+    border-radius: 100px;
+    justify-content: space-between;
+    height: fit-content;
+    /* position: relative;
+    left: calc(50% - 1086px/2 + 1px);
+    top: 37px;
+    z-index: 1; */
+
+}
+.logo-mark {
+    font-size: calc(1.5rem + 2vw);
+    font-family: Brownstone;
+    padding: 0px;
+    margin: 0px;
+}
+.tabs-nav {
+    /* justify-content: end; */
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    width: fit-content;
+    gap: calc(10px + 5vw);
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+.tab {
+    font-size: calc(1.4rem + 0.2vw);
+    padding: 10px 16px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 0px;
+    margin: 0px;
+}
+.tab:hover, .active {
+    background-color: black;
+    color: white;
+}
+@media screen and (width < 768px) {
+    nav {
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 4px;
+        top: 20px;
+    }
+    .tab {
+        font-size: calc(1rem + 0.2vw);
+        padding: 4px;
+    }
+
+}
+
+
+
+
+
+.hero {
+    background-image: url(assets/hero-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: clamp(500px, calc(390.909px + 34.091vw), 800px);
+    margin: 0px;
+    /* position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 0; */
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 100px 320px; */
+    padding: clamp(180px, calc(158.182px + 6.818vw), 240px) clamp(32px, calc(-18.182px + 15.682vw), 170px);
+}
+.hero > h1 {
+    font-family: Brownstone;
+    /* font-size: calc(3rem + 2vw); */
+    font-size: 80px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 0px;
+}
+.hero-text {
+    font-size: 24px;
+}
+@media screen and (width < 768px) {
+    
+    .hero > h1 {
+        font-size: 48px;
+    }
+
+}
+
+
+
+.features {
+    color: black;
+    display: flex;
+    padding: 0px;
+    /* margin: clamp(500px, calc(390.909px + 34.091vw), 800px) -32px; */
+    /* margin: clamp(500px, calc(300px + 34.091vw), 800px) -32px; */
+    border: 1px solid black;
+}
+.right-feature , .left-feature {
+    padding:clamp(32px, calc(16px + 5vw), 76px)
+            clamp(16px, calc(10.182px + 1.818vw), 32px);
+    align-self: center;
+
+}
+.left-feature {
+    border-right: 1px solid black;
+    font-size: calc(1.1rem + 0.5vw);
+    font-weight: normal;
+    flex: 1;
+}
+.right-feature {
+    font-size: 20px;
+    flex: 2;
+}
+@media screen and (width < 768px) {
+    
+    .features {
+        flex-flow: column;
+    }
+    .left-feature {
+    border-bottom: 1px solid black;
+    }
+
+}
+
+
+
+
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    padding:clamp(32px, calc(16px + 5vw), 76px)
+    clamp(16px, calc(10.182px + 1.818vw), 32px);
+    justify-content: space-between;
+    gap: 10px;
+    border: 1px solid black;
+
+}
+.gallery-img {
+    width: clamp(221px, calc(103.545px + 36.705vw), 544px);
+    height: fit-content;
+}
+.img2 {
+    padding-top: clamp(0px, calc(-76.923px + 24.038vw), 200px);
+}
+@media screen and (width < 768px) {
+    
+    .gallery {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+}
+
+
+
+.bottom{
+    padding:clamp(32px, calc(16px + 5vw), 76px)
+    clamp(16px, calc(10.182px + 1.818vw), 32px);
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.bottom-text {
+    font-size: clamp(20px, calc(16.364px + 1.136vw), 30px);
+    width: clamp(288px, calc(74.545px + 66.705vw), 875px);
+}
+@media screen and (width < 768px) {
+    
+    .bottom {
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bottom-text + img {
+        
+    }
+
+}
+
+
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: clamp(12px, calc(10.462px + 0.481vw), 16px);;
+}
+
+
+
+
+
+
+
+
+
+
+
+.menu-hero {
+    background-color: black;
+    color: white;
+    padding: 25px 100px;
+    display: flex;
+    justify-content: center;
+}
+.menu-hero > p {
+    display: flex;
+    padding: 10px clamp(100px, calc(-15.385px + 36.058vw), 400px);
+    text-align: center;
+    border: 1px solid white;
+    font-family: Brownstone;
+    font-size: 64px;
+
+}
+.menu-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    padding:clamp(32px, calc(16px + 5vw), 76px)
+    clamp(16px, calc(10.182px + 1.818vw), 32px);
+
+}
+.menu-listing {
+    padding: clamp(32px, calc(19.692px + 3.846vw), 64px) 10px 10px 10px;
+    font-size: clamp(28px, calc(23.385px + 1.442vw), 40px);
+    font-family: Brownstone;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.menu-listing  p {
+    margin: 0px;
+}
+
+.open-menu-listing {
+    
+    display: flex;
+    flex-flow: column nowrap;
+}
+.menu-listing-title {
+    padding: 64px 10px 10px 10px;
+    font-size: clamp(28px, calc(23.385px + 1.442vw), 40px);
+    font-family: Brownstone;
+    border-bottom: 1px solid black;
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.open-list-content {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 22px;
+    padding-left: 16px;
+    padding-top: 20px;
+}
+.item-title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: clamp(20px, calc(18.462px + 0.481vw), 24px);
+    text-transform: uppercase;
+}
+p.item-title {
+    margin: 0px;
+}
+.item-details {
+    color: gray;
 }

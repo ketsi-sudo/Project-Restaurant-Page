@@ -14,14 +14,32 @@ window.addEventListener("load", () => {
     tabBtn.forEach((tab) => {
         tab.addEventListener("click", (e) => {
             // console.log(e.target.textContent);
-           
+            
             const container = document.querySelector(".container");
             container.innerHTML = ""
+            const homeBtn = document.querySelector("#tab1")
+            const menuBtn = document.querySelector("#tab2")
+            const contactBtn = document.querySelector("#tab3")
+
             if (e.target.textContent === "Home") {
+                
+                homeBtn.classList.add("active")
+                menuBtn.classList.remove("active")
+                contactBtn.classList.remove("active")
                 createHomePage();
+
             } else if (e.target.textContent === "Menu") {
+
+                menuBtn.classList.add("active")
+                homeBtn.classList.remove("active")
+                contactBtn.classList.remove("active")
                 createMenuPage();
+
             } else if (e.target.textContent === "Contact") {
+
+                contactBtn.classList.add("active")
+                homeBtn.classList.remove("active")
+                menuBtn.classList.remove("active")
                 createContactPage();
             }
 
